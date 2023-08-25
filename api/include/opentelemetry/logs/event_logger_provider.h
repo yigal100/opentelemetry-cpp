@@ -17,7 +17,7 @@ class Logger;
 /**
  * Creates new EventLogger instances.
  */
-class EventLoggerProvider
+class OPENTELEMETRY_EXPORT EventLoggerProvider
 {
 public:
   virtual ~EventLoggerProvider() = default;

@@ -3,7 +3,6 @@
 
 #include "opentelemetry/sdk/logs/event_logger.h"
 #include "opentelemetry/sdk_config.h"
-#include "opentelemetry/trace/provider.h"
 
 OPENTELEMETRY_BEGIN_NAMESPACE
 namespace sdk
