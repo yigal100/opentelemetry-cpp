@@ -331,6 +331,10 @@ if(WITH_OTLP_GRPC)
   endif()
 endif()
 
+if(TARGET gRPC::grpc++)
+  target_link_libraries(opentelemetry_proto PUBLIC gRPC::grpc++)
+endif()
+
 if(BUILD_SHARED_LIBS)
   foreach(proto_target ${OPENTELEMETRY_PROTO_TARGETS})
     set_property(TARGET ${proto_target} PROPERTY POSITION_INDEPENDENT_CODE ON)
