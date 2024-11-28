@@ -345,6 +345,10 @@ if(WITH_OTLP_GRPC)
   list(APPEND OPENTELEMETRY_PROTO_TARGETS opentelemetry_proto_grpc)
   target_link_libraries(opentelemetry_proto_grpc PUBLIC opentelemetry_proto)
 
+  if(TARGET gRPC::grpc++)
+    target_link_libraries(opentelemetry_proto PUBLIC gRPC::grpc++)
+  endif()
+
   get_target_property(grpc_lib_type gRPC::grpc++ TYPE)
   if(grpc_lib_type STREQUAL "SHARED_LIBRARY")
     target_link_libraries(opentelemetry_proto_grpc PUBLIC gRPC::grpc++)
