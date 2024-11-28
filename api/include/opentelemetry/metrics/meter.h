@@ -31,7 +31,7 @@ class ObservableInstrument;
  * measurements from all instruments.
  *
  */
-class Meter
+class OPENTELEMETRY_EXPORT Meter
 {
 public:
   virtual ~Meter() = default;
